@@ -1,15 +1,19 @@
 {
-  "name": "parcel-sandbox",
+  "name": "random-with-flip",
   "version": "1.0.0",
-  "description": "Simple Parcel Sandbox",
+  "description": "a random function implemented using a random boolean",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "predeploy": "rm -rf dist && parcel build index.html --public-url /random-with-flip",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "7.2.0",
-    "parcel-bundler": "^1.6.1"
+    "gh-pages": "^2.0.1",
+    "parcel-bundler": "^1.6.1",
+    "parcel": "^1.9.7"
   }
 }
